@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class XYMainViewController: NSViewController {
+class XYMainViewController: NSViewController,XYDragDropViewDelegate {
 
     @IBOutlet weak var dragInView: XYDragDropView!
     @IBOutlet weak var dragOutView: XYDragDropView!
@@ -18,7 +18,12 @@ class XYMainViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         self.dragInView.layer?.backgroundColor = NSColor.red.cgColor
-        
+        self.dragInView.delegate = self
+        self.dragOutView.delegate = self
+    }
+    
+    func dragDropFilePathList(array: Array<String>) {
+        print(array);
     }
     
 }
