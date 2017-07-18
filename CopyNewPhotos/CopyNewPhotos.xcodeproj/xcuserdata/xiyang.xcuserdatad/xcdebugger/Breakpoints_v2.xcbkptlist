@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CopyNewPhotos/XYDragDropView.swift"
-            timestampString = "520508614.003233"
+            timestampString = "521968750.182783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "prepareForDragOperation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -25,14 +25,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CopyNewPhotos/XYDragDropView.swift"
-            timestampString = "520508626.412086"
+            filePath = "CopyNewPhotos/XYMainViewController.swift"
+            timestampString = "521973758.676456"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "draggingEntered(_:)"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getImage(array:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CopyNewPhotos.XYMainViewController.getImage (array : Swift.Array&lt;Swift.String&gt;) -&gt; __ObjC.NSMutableArray"
+                  moduleName = "CopyNewPhotos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lulei/Desktop/GetSubPathFile/CopyNewPhotos/CopyNewPhotos/XYMainViewController.swift"
+                  timestampString = "521973759.10894"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "826">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CopyNewPhotos.XYMainViewController.getImage (array : Swift.Array&lt;Swift.String&gt;) -&gt; __ObjC.NSMutableArray"
+                  moduleName = "CopyNewPhotos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lulei/Desktop/GetSubPathFile/CopyNewPhotos/CopyNewPhotos/XYMainViewController.swift"
+                  timestampString = "521973759.110378"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "1448">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

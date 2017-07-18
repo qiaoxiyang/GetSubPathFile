@@ -13,7 +13,7 @@
 		AA258A481F03826400610CF8 /* CopyNewPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA258A471F03826400610CF8 /* CopyNewPhotosTests.swift */; };
 		AA258A531F03826400610CF8 /* CopyNewPhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA258A521F03826400610CF8 /* CopyNewPhotosUITests.swift */; };
 		AA258A621F0383CC00610CF8 /* XYMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA258A611F0383CC00610CF8 /* XYMainViewController.swift */; };
-		AA258A641F0388E800610CF8 /* XYDragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA258A631F0388E800610CF8 /* XYDragDropView.swift */; };
+		AA8E5E331F1C9C1F00292F14 /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8E5E321F1C9C1F00292F14 /* DestinationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		AA258A521F03826400610CF8 /* CopyNewPhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyNewPhotosUITests.swift; sourceTree = "<group>"; };
 		AA258A541F03826400610CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA258A611F0383CC00610CF8 /* XYMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYMainViewController.swift; sourceTree = "<group>"; };
-		AA258A631F0388E800610CF8 /* XYDragDropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDragDropView.swift; sourceTree = "<group>"; };
+		AA8E5E321F1C9C1F00292F14 /* DestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 			children = (
 				AA258A351F03826400610CF8 /* AppDelegate.swift */,
 				AA258A611F0383CC00610CF8 /* XYMainViewController.swift */,
-				AA258A631F0388E800610CF8 /* XYDragDropView.swift */,
+				AA8E5E321F1C9C1F00292F14 /* DestinationView.swift */,
 				AA258A391F03826400610CF8 /* Assets.xcassets */,
 				AA258A3B1F03826400610CF8 /* Main.storyboard */,
 				AA258A3E1F03826400610CF8 /* Info.plist */,
@@ -262,8 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA258A621F0383CC00610CF8 /* XYMainViewController.swift in Sources */,
+				AA8E5E331F1C9C1F00292F14 /* DestinationView.swift in Sources */,
 				AA258A361F03826400610CF8 /* AppDelegate.swift in Sources */,
-				AA258A641F0388E800610CF8 /* XYDragDropView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +511,7 @@
 				AA258A591F03826400610CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA258A5A1F03826400610CF8 /* Build configuration list for PBXNativeTarget "CopyNewPhotosTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +520,7 @@
 				AA258A5C1F03826400610CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA258A5D1F03826400610CF8 /* Build configuration list for PBXNativeTarget "CopyNewPhotosUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +529,7 @@
 				AA258A5F1F03826400610CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
