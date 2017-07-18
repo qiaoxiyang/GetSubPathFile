@@ -14,6 +14,12 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate{
 
     @IBOutlet weak var dragInView: DestinationView!
     @IBOutlet weak var dragOutView: DestinationView!
+    
+    @IBOutlet weak var inLab: NSTextField!
+    @IBOutlet weak var outLab: NSTextField!
+    @IBOutlet weak var inFileImage: NSImageView!
+    @IBOutlet weak var inPathLab: NSTextField!
+    
     let fileManager = FileManager.default
     var oldPathArr :Array<String>?
     var oldPath :NSString?
@@ -27,6 +33,9 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate{
         self.dragInView.xy_tag = 100
         self.dragOutView.delegate = self
         self.dragOutView.xy_tag = 101
+        
+  
+        
     }
     
     func dragDropFilePathList(array: Array<String>, view: NSView) {
@@ -36,7 +45,13 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate{
             //
              print("拖入文件路径\(array)")
             if array.count>0 {
-                oldPath = array.first as? NSString
+                oldPath = array.first as NSString?
+                self.inPathLab.isHidden = false
+                
+                self.inFileImage.isHidden = false
+                
+                self.inPathLab.stringValue = (oldPath?.lastPathComponent)!
+                self.inLab.textColor = NSColor.lightGray
             }
             oldPathArr = self.getImage(array: array) as? Array<String>
         }else{
@@ -46,7 +61,7 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate{
                 print("拖入的文件为空")
                 return
             }
-            let nFileStr = array.first as? NSString
+            let nFileStr = array.first as NSString?
             
             if (oldPathArr?.count)!>0 {
                 for file in oldPathArr! {
@@ -58,7 +73,6 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate{
                 
                     try! fileManager.copyItem(atPath: endFileStr!, toPath: toFileStr!)
                   
-                    
                 }
             }
             
@@ -71,8 +85,7 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate{
         let imgArr = NSMutableArray()
         for path in array {
             if path.hasSuffix(".png") {
-                
-                
+        
                 imgArr.add(path)
             }else{
                 let pathArr = fileManager.subpaths(atPath: path)

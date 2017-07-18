@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -683,68 +684,109 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="XYMainViewController" customModule="CopyNewPhotos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="545" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="501" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="pW4-ug-HbR" customClass="DestinationView" customModule="CopyNewPhotos" customModuleProvider="target">
-                                <rect key="frame" x="150" y="150" width="395" height="150"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="UIK-Hh-cXu">
+                                <rect key="frame" x="150" y="200" width="351" height="200"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6TS-wZ-xXG">
-                                        <rect key="frame" x="136" y="20" width="124" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="拖拽被筛选的文件夹" id="caM-Wr-stB">
-                                            <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vha-X2-VXk">
-                                        <rect key="frame" x="148" y="25" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="AOY-uc-dUF"/>
-                                            <constraint firstAttribute="height" constant="100" id="wT6-uq-qaI"/>
-                                        </constraints>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="placeholder" id="p2l-xl-ArE"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SVf-b0-2OU">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="200"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="background_icon" id="rHP-aJ-YwB"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="6TS-wZ-xXG" firstAttribute="centerX" secondItem="pW4-ug-HbR" secondAttribute="centerX" id="12w-fa-u4L"/>
-                                    <constraint firstItem="Vha-X2-VXk" firstAttribute="centerY" secondItem="pW4-ug-HbR" secondAttribute="centerY" id="Bcu-VZ-SPg"/>
-                                    <constraint firstAttribute="bottom" secondItem="6TS-wZ-xXG" secondAttribute="bottom" constant="20" id="fZ4-Dw-2v2"/>
-                                    <constraint firstItem="Vha-X2-VXk" firstAttribute="centerX" secondItem="pW4-ug-HbR" secondAttribute="centerX" id="i0V-oU-xcu"/>
+                                    <constraint firstAttribute="bottom" secondItem="SVf-b0-2OU" secondAttribute="bottom" id="Ish-y7-IkK"/>
+                                    <constraint firstItem="SVf-b0-2OU" firstAttribute="leading" secondItem="UIK-Hh-cXu" secondAttribute="leading" id="bCT-4y-2vV"/>
+                                    <constraint firstAttribute="trailing" secondItem="SVf-b0-2OU" secondAttribute="trailing" id="dlu-Or-1oL"/>
+                                    <constraint firstItem="SVf-b0-2OU" firstAttribute="top" secondItem="UIK-Hh-cXu" secondAttribute="top" id="kKH-uX-Aa7"/>
                                 </constraints>
                             </customView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="YkN-4m-zzM" customClass="DestinationView" customModule="CopyNewPhotos" customModuleProvider="target">
-                                <rect key="frame" x="150" y="0.0" width="395" height="150"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="jif-Nw-5Jh">
+                                <rect key="frame" x="150" y="0.0" width="351" height="200"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ldl-md-qrx">
-                                        <rect key="frame" x="162" y="20" width="71" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="新的文件夹" id="fsO-Ad-oEp">
-                                            <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gg0-mo-SLE">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="200"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="exportBg" id="eAK-RV-mgi"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gg0-mo-SLE" firstAttribute="top" secondItem="jif-Nw-5Jh" secondAttribute="top" id="4Gy-qv-fd7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gg0-mo-SLE" secondAttribute="trailing" id="Rh5-ly-nbf"/>
+                                    <constraint firstItem="Gg0-mo-SLE" firstAttribute="leading" secondItem="jif-Nw-5Jh" secondAttribute="leading" id="WM2-JM-Nh0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gg0-mo-SLE" secondAttribute="bottom" id="vbe-qJ-Jij"/>
+                                </constraints>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="pW4-ug-HbR" customClass="DestinationView" customModule="CopyNewPhotos" customModuleProvider="target">
+                                <rect key="frame" x="150" y="200" width="351" height="200"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zhs-GT-9Ga">
+                                        <rect key="frame" x="98" y="73" width="155" height="54"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drag In" id="WI6-IW-lHJ">
+                                            <font key="font" metaFont="systemBold" size="45"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HxM-Xa-dsH">
+                                        <rect key="frame" x="30" y="140" width="60" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="1yZ-5k-Xc2"/>
+                                            <constraint firstAttribute="width" secondItem="HxM-Xa-dsH" secondAttribute="height" multiplier="41:31" id="WgJ-bz-9CF"/>
+                                        </constraints>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="folder_icon" id="nP5-C4-db3"/>
+                                    </imageView>
+                                    <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="OfI-Mg-dYj">
+                                        <rect key="frame" x="28" y="96" width="64" height="34"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="2dm-VE-hgM">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Zhs-GT-9Ga" firstAttribute="centerX" secondItem="pW4-ug-HbR" secondAttribute="centerX" id="7uC-tE-4EC"/>
+                                    <constraint firstItem="OfI-Mg-dYj" firstAttribute="top" secondItem="HxM-Xa-dsH" secondAttribute="bottom" constant="10" id="9ma-Ou-3pn"/>
+                                    <constraint firstItem="HxM-Xa-dsH" firstAttribute="leading" secondItem="pW4-ug-HbR" secondAttribute="leading" constant="30" id="D3t-Nb-5iT"/>
+                                    <constraint firstItem="OfI-Mg-dYj" firstAttribute="trailing" secondItem="HxM-Xa-dsH" secondAttribute="trailing" id="GhH-9U-mMe"/>
+                                    <constraint firstItem="Zhs-GT-9Ga" firstAttribute="centerY" secondItem="pW4-ug-HbR" secondAttribute="centerY" id="MJy-GN-YgJ"/>
+                                    <constraint firstItem="HxM-Xa-dsH" firstAttribute="top" secondItem="pW4-ug-HbR" secondAttribute="top" constant="15" id="Vw3-rn-7nD"/>
+                                    <constraint firstItem="OfI-Mg-dYj" firstAttribute="leading" secondItem="HxM-Xa-dsH" secondAttribute="leading" id="nOd-pX-Oxt"/>
+                                </constraints>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="YkN-4m-zzM" customClass="DestinationView" customModule="CopyNewPhotos" customModuleProvider="target">
+                                <rect key="frame" x="150" y="0.0" width="351" height="200"/>
+                                <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jVN-aX-IoC">
-                                        <rect key="frame" x="148" y="25" width="100" height="100"/>
+                                        <rect key="frame" x="126" y="50" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="FxN-il-eL4"/>
                                             <constraint firstAttribute="width" constant="100" id="MyO-1j-Ea5"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="placeholder" id="vsS-wy-fKK"/>
                                     </imageView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zam-eo-AhI">
+                                        <rect key="frame" x="104" y="73" width="143" height="54"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Export" id="FGA-Y5-w3g">
+                                            <font key="font" metaFont="systemBold" size="45"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ldl-md-qrx" secondAttribute="bottom" constant="20" id="YIp-fw-4UP"/>
+                                    <constraint firstItem="zam-eo-AhI" firstAttribute="centerX" secondItem="YkN-4m-zzM" secondAttribute="centerX" id="fKR-Ll-dNB"/>
+                                    <constraint firstItem="zam-eo-AhI" firstAttribute="centerY" secondItem="YkN-4m-zzM" secondAttribute="centerY" id="jZV-Wh-22i"/>
                                     <constraint firstItem="jVN-aX-IoC" firstAttribute="centerX" secondItem="YkN-4m-zzM" secondAttribute="centerX" id="l9d-zd-i2t"/>
                                     <constraint firstItem="jVN-aX-IoC" firstAttribute="centerY" secondItem="YkN-4m-zzM" secondAttribute="centerY" id="lXk-di-hh6"/>
-                                    <constraint firstItem="ldl-md-qrx" firstAttribute="centerX" secondItem="YkN-4m-zzM" secondAttribute="centerX" id="pIW-Z4-P9f"/>
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="vDZ-yf-21h">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="400"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Ol-dG-3jC">
-                                        <rect key="frame" x="8" y="243" width="84" height="17"/>
+                                        <rect key="frame" x="8" y="343" width="84" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="筛选的内容为" id="wpZ-A5-p4k">
                                             <font key="font" size="13" name=".PingFangSC-Regular"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -752,7 +794,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QAr-3k-esc">
-                                        <rect key="frame" x="5" y="201" width="141" height="22"/>
+                                        <rect key="frame" x="5" y="301" width="141" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="请输入所要筛选的内容" drawsBackground="YES" id="Sfn-yS-yoc">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -773,13 +815,21 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="YkN-4m-zzM" secondAttribute="bottom" id="85k-hx-y5n"/>
                             <constraint firstItem="YkN-4m-zzM" firstAttribute="height" secondItem="pW4-ug-HbR" secondAttribute="height" id="Eod-J7-Zmj"/>
+                            <constraint firstItem="jif-Nw-5Jh" firstAttribute="top" secondItem="YkN-4m-zzM" secondAttribute="top" id="HiC-er-HQ0"/>
                             <constraint firstAttribute="trailing" secondItem="YkN-4m-zzM" secondAttribute="trailing" id="JdQ-Ri-Lzl"/>
                             <constraint firstItem="YkN-4m-zzM" firstAttribute="leading" secondItem="vDZ-yf-21h" secondAttribute="trailing" id="K2k-hJ-bIO"/>
+                            <constraint firstItem="UIK-Hh-cXu" firstAttribute="bottom" secondItem="pW4-ug-HbR" secondAttribute="bottom" id="NlY-BT-dBG"/>
+                            <constraint firstItem="UIK-Hh-cXu" firstAttribute="leading" secondItem="pW4-ug-HbR" secondAttribute="leading" id="Q3B-Mg-f0g"/>
                             <constraint firstItem="YkN-4m-zzM" firstAttribute="width" secondItem="pW4-ug-HbR" secondAttribute="width" id="QCb-AK-1ye"/>
+                            <constraint firstItem="UIK-Hh-cXu" firstAttribute="top" secondItem="pW4-ug-HbR" secondAttribute="top" id="Utj-TT-3t9"/>
                             <constraint firstItem="YkN-4m-zzM" firstAttribute="top" secondItem="pW4-ug-HbR" secondAttribute="bottom" id="Uwu-xS-8PA"/>
                             <constraint firstItem="vDZ-yf-21h" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="cgh-Uc-8NZ"/>
+                            <constraint firstItem="jif-Nw-5Jh" firstAttribute="trailing" secondItem="YkN-4m-zzM" secondAttribute="trailing" id="kJb-8m-f5s"/>
                             <constraint firstItem="pW4-ug-HbR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="oUG-kZ-1RA"/>
+                            <constraint firstItem="jif-Nw-5Jh" firstAttribute="bottom" secondItem="YkN-4m-zzM" secondAttribute="bottom" id="sqr-Et-gU0"/>
                             <constraint firstAttribute="bottom" secondItem="vDZ-yf-21h" secondAttribute="bottom" id="t6C-lv-Dzq"/>
+                            <constraint firstItem="UIK-Hh-cXu" firstAttribute="trailing" secondItem="pW4-ug-HbR" secondAttribute="trailing" id="uFh-wZ-njh"/>
+                            <constraint firstItem="jif-Nw-5Jh" firstAttribute="leading" secondItem="YkN-4m-zzM" secondAttribute="leading" id="uul-jU-rSX"/>
                             <constraint firstItem="vDZ-yf-21h" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="vct-R3-lKe"/>
                             <constraint firstAttribute="trailing" secondItem="pW4-ug-HbR" secondAttribute="trailing" id="xXZ-ch-wPy"/>
                         </constraints>
@@ -787,14 +837,21 @@
                     <connections>
                         <outlet property="dragInView" destination="pW4-ug-HbR" id="j0D-bd-fWq"/>
                         <outlet property="dragOutView" destination="YkN-4m-zzM" id="vpo-2l-TXk"/>
+                        <outlet property="inFileImage" destination="HxM-Xa-dsH" id="DIQ-Ez-MCd"/>
+                        <outlet property="inLab" destination="Zhs-GT-9Ga" id="cm0-dh-nTi"/>
+                        <outlet property="inPathLab" destination="OfI-Mg-dYj" id="UyF-ho-k69"/>
+                        <outlet property="outLab" destination="zam-eo-AhI" id="R1T-H9-OVe"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107.5" y="795"/>
+            <point key="canvasLocation" x="-880.5" y="442"/>
         </scene>
     </scenes>
     <resources>
+        <image name="background_icon" width="191" height="71"/>
+        <image name="exportBg" width="202" height="200"/>
+        <image name="folder_icon" width="123" height="93"/>
         <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
