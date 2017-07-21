@@ -20,7 +20,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        //当点击关闭按钮的时候结束APP进程
+        return true
+    }
+    
+    
+    @IBAction func helpAction(_ sender: Any) {
+    }
+    
+    
 
 }
 

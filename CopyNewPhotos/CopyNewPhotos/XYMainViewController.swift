@@ -50,6 +50,12 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate,NSTableView
         self.popUpBtn.removeAllItems()
         self.popUpBtn.addItems(withTitles: ["png","jpg","doc","docx","xlsx","pptx","psd","pdf","cs"])
         
+
+        let window = NSApplication.shared().windows.first
+        var frame = window?.frame
+        frame?.size.width = 724
+        frame?.size.height = 624
+        window?.setFrame(frame!, display: true)        
     }
     
     @IBAction func startButtonAction(_ sender: NSButton) {
