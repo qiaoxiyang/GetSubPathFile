@@ -51,6 +51,7 @@
 左边的`DragIn`是被筛选的文件夹，右边的`Export`是你想要将筛选出来的文件存放的文件夹。
 
 ![Select.gif](http://upload-images.jianshu.io/upload_images/1180232-59ce4aad49fac6ab.gif?imageMogr2/auto-orient/strip)
+
 ####GetSubPathFile的实现
 `GetSubPathFile`是通过`Swift`来进行编写的，主要就是使用递归算法，在此贴出部分主要代码：
 * 根据后缀名筛选出符合的文件
