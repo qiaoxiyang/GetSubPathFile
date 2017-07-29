@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -190,7 +190,7 @@
                                                                             </constraints>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="folder_icon" id="yaF-6C-tt2"/>
                                                                         </imageView>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bsT-ai-P5j">
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsT-ai-P5j">
                                                                             <rect key="frame" x="63" y="25" width="37" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="i8w-VH-PkM">
                                                                                 <font key="font" metaFont="system"/>
@@ -198,7 +198,7 @@
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-fO-REf">
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-fO-REf">
                                                                             <rect key="frame" x="63" y="3" width="210" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="0Tu-bS-bfb">
                                                                                 <font key="font" metaFont="system"/>
@@ -244,7 +244,7 @@
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="pW4-ug-HbR" customClass="DestinationView" customModule="GetSubPathFile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="276" height="573"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zhs-GT-9Ga">
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhs-GT-9Ga">
                                                 <rect key="frame" x="60" y="260" width="155" height="54"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drag In" id="WI6-IW-lHJ">
                                                     <font key="font" metaFont="systemBold" size="45"/>
@@ -274,7 +274,7 @@
                                     <constraint firstItem="SVf-b0-2OU" firstAttribute="leading" secondItem="UIK-Hh-cXu" secondAttribute="leading" id="qz1-gX-ok7"/>
                                 </constraints>
                             </customView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yfe-9a-FR2">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfe-9a-FR2">
                                 <rect key="frame" x="274" y="578" width="177" height="36"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="GetSubFiles" id="Ogc-Oy-wwt">
                                     <font key="font" metaFont="systemBold" size="30"/>
@@ -313,7 +313,7 @@
                                             <action selector="settingBtnAction:" target="XfG-lQ-9wD" id="emP-O5-AuN"/>
                                         </connections>
                                     </button>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cFh-WK-TPv">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFh-WK-TPv">
                                         <rect key="frame" x="-2" y="213" width="164" height="24"/>
                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="PNG" id="Qow-Fc-MNC">
                                             <font key="font" metaFont="systemBold" size="20"/>
@@ -321,11 +321,27 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hIk-CN-5ny">
+                                        <rect key="frame" x="5" y="8" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="bge-c0-Nd2"/>
+                                            <constraint firstAttribute="height" constant="40" id="wep-9H-yHz"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="clearall" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="h7T-Lo-Yua">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="clearAllBtnAction:" target="XfG-lQ-9wD" id="42R-uF-ATY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="hIk-CN-5ny" firstAttribute="centerY" secondItem="Lve-Bg-pui" secondAttribute="centerY" id="8iB-eT-wSO"/>
                                     <constraint firstAttribute="trailing" secondItem="Lve-Bg-pui" secondAttribute="trailing" constant="15" id="B7F-1N-6lq"/>
                                     <constraint firstItem="cFh-WK-TPv" firstAttribute="top" secondItem="L2i-dL-xhn" secondAttribute="bottom" constant="20" id="Fnm-4Q-5vb"/>
                                     <constraint firstAttribute="bottom" secondItem="Lve-Bg-pui" secondAttribute="bottom" constant="10" id="SQM-oM-2av"/>
+                                    <constraint firstItem="hIk-CN-5ny" firstAttribute="leading" secondItem="vDZ-yf-21h" secondAttribute="leading" constant="5" id="Udl-7G-GGa"/>
                                     <constraint firstItem="L2i-dL-xhn" firstAttribute="centerX" secondItem="vDZ-yf-21h" secondAttribute="centerX" id="Uy2-Uf-prj"/>
                                     <constraint firstAttribute="trailing" secondItem="cFh-WK-TPv" secondAttribute="trailing" id="Vwr-8B-IGE"/>
                                     <constraint firstAttribute="width" constant="160" id="YIA-Rg-D4U"/>
@@ -343,7 +359,7 @@
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="YkN-4m-zzM" customClass="DestinationView" customModule="GetSubPathFile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="282" height="573"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zam-eo-AhI">
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zam-eo-AhI">
                                                 <rect key="frame" x="70" y="260" width="143" height="54"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Export" id="FGA-Y5-w3g">
                                                     <font key="font" metaFont="systemBold" size="45"/>
@@ -351,7 +367,7 @@
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="OvI-2I-BrW">
+                                            <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvI-2I-BrW">
                                                 <rect key="frame" x="13" y="473" width="64" height="34"/>
                                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="XA8-Cz-amy">
                                                     <font key="font" metaFont="system"/>
@@ -393,7 +409,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="1vD-iQ-HKj">
                                 <rect key="frame" x="0.0" y="-35" width="724" height="35"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T9Z-SQ-Oq8">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9Z-SQ-Oq8">
                                         <rect key="frame" x="13" y="8" width="127" height="19"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="常用文件后缀名：" id="cpb-P4-Fx2">
                                             <font key="font" size="15" name=".PingFangSC-Regular"/>
@@ -415,7 +431,7 @@
                                             </menu>
                                         </popUpButtonCell>
                                     </popUpButton>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jd5-KJ-UQ0">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd5-KJ-UQ0">
                                         <rect key="frame" x="276" y="8" width="173" height="19"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="自定义筛选文件后缀名：" id="WJm-Xc-r4s">
                                             <font key="font" size="15" name=".PingFangSC-Regular"/>
@@ -423,7 +439,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QAr-3k-esc">
+                                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAr-3k-esc">
                                         <rect key="frame" x="467" y="7" width="237" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="请输入所要筛选的后缀名" drawsBackground="YES" id="Sfn-yS-yoc">
                                             <font key="font" metaFont="system"/>
@@ -465,6 +481,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clearAllBtn" destination="hIk-CN-5ny" id="fxb-Oo-F7H"/>
                         <outlet property="displayFileType" destination="cFh-WK-TPv" id="3bj-2l-hWD"/>
                         <outlet property="dragInTableView" destination="6oh-pE-gVK" id="71I-m2-1L6"/>
                         <outlet property="dragInView" destination="pW4-ug-HbR" id="j0D-bd-fWq"/>
@@ -484,6 +501,7 @@
     </scenes>
     <resources>
         <image name="background_icon" width="273" height="573"/>
+        <image name="clearall" width="80" height="80"/>
         <image name="exportBg" width="273" height="573"/>
         <image name="exportFolder_icon" width="123" height="93"/>
         <image name="folder_icon" width="123" height="93"/>

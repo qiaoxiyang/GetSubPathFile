@@ -31,6 +31,7 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate,NSTableView
     @IBOutlet weak var extionField: NSTextField! //自定义文件类型编辑框
     @IBOutlet weak var popUpBtn: NSPopUpButton!
     @IBOutlet weak var displayFileType: NSTextField!
+    @IBOutlet weak var clearAllBtn: NSButton! //删除按钮
     
     var settingViewShow = false
     
@@ -114,6 +115,15 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate,NSTableView
         nFrame?.size.height = CGFloat(nHeight)
         window?.setFrame(nFrame!, display: true, animate: true)
     }
+    //清空所有按钮
+    @IBAction func clearAllBtnAction(_ sender: NSButton) {
+        
+        sender.isHidden = true
+        self.dragInPathArr.removeAll()
+        self.dragInTableView.reloadData()
+    }
+    
+    
     
     func copyNewFile(fileArr:Array<String>) -> Array<String>?{
         
@@ -222,6 +232,7 @@ class XYMainViewController: NSViewController ,XYDragDropViewDelegate,NSTableView
             self.dragInPathArr = nSet
             self.dragInTableView.reloadData()
             self.inLab.textColor = NSColor.lightGray
+            self.clearAllBtn.isHidden = false
         }
     }
     
